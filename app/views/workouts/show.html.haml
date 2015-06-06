@@ -3,6 +3,11 @@
 	%p= @workout.workout
 	%p= @workout.mood
 	%p= @workout.length
+#exercises
+	%h2 exercises
+	= render @workout.exercises
+	%h2 Add exercises	
+	= render "exercises/form"
 
 = link_to "Back", root_path
 = link_to "Edit", edit_workout_path(@workout)
