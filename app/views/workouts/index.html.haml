@@ -2,7 +2,7 @@
 	%p=  link_to workout.mood,workout_path(workout)
 	%p= workout.workout
 	%p= workout.length
-	%p= workout.date
+	%p= workout.date.strftime("%A %B %d %Y")
 	= link_to  "Show", workout_path(workout)
 	= link_to "Edit", edit_workout_path(workout)
 	= link_to "Delete", workout_path(workout), method: :delete, data: { confirm: "Are you sure?" }
